@@ -40,7 +40,7 @@ const VideoBackground = ({ setShow }) => {
   return (
     <div className='h-screen overflow-hidden'>
       <div className="overlay"></div>
-      <video ref={videoRef} src={videoBg} autoPlay loop muted />
+      <video ref={videoRef} src={videoBg} autoPlay loop muted type="video/mp4"/>
       {isPlaying &&
         <div className="h-screen content">
           <TypingEffectComponent showFullText={showFullText} setShowFullText={setShowFullText}/>
