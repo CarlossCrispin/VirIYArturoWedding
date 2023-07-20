@@ -8,14 +8,14 @@ export default function Base() {
 
   return (
     <div className="">
-      {/* {!show &&
-      <Main setShow={setShow} />} */}
+      {!show &&
+      <Main setShow={setShow} />}
       {/* {!show &&
         <VideoBackground setShow={setShow} show={show} />} */}
 
-      {show ? <Main setShow={setShow} /> : (<div className="video-container">
+      {/* {show ? <Main setShow={setShow} /> : (<div className="video-container">
         <VideoBackground setShow={setShow} show={show} />
-      </div>)}
+      </div>)} */}
     </div>
   )
 }

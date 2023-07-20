@@ -1,17 +1,32 @@
-import{ useState, useEffect } from 'react';
-import Countdown from 'countdown';
+import { useState, useEffect } from 'react';
 
-const Section2 = () => {
+const CountdownTimer = () => {
   const targetDate = new Date('2023-12-16T00:00:00').getTime();
-  const [timeLeft, setTimeLeft] = useState(Countdown(targetDate));
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  function calculateTimeLeft() {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    return { days, hours, minutes, seconds };
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft(Countdown(targetDate));
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, []);
 
   return (
     <div className="py-4 text-center">
@@ -38,4 +53,4 @@ const Section2 = () => {
   );
 };
 
-export default Section2;
+export default CountdownTimer;
