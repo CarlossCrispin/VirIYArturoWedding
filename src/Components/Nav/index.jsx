@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { RiHeartsLine } from 'react-icons/Ri';
+import { RiHeartsLine } from 'react-icons/ri';
 
 const Navbar = ({ setShow }) => {
   const [isScrolled, setIsScrolled] = useState(false);
