@@ -1,0 +1,17 @@
+/* TypingEffect.css */
+
+.typing-effect-container {
+  text-align: left;
+  color: #fff;
+  line-break: loose;
+}
+
+.montserrat-font {
+  font-family: 'Dancing Script', cursive;
+}
+
+p {
+  margin: 10px 0;
+  font-weight: lighter;
+  line-height-step: 20px;
+}

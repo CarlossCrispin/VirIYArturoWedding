@@ -1,0 +1,27 @@
+
+
+.progress-bar-container {
+  width: 80vw;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative; /* Para que el icono esté posicionado dentro del contenedor */
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #5e84e2;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinea el icono a la derecha */
+}
+
+.envelope-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  position: relative;
+}
+
